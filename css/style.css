@@ -1,0 +1,123 @@
+/* lockscreen styling start */
+.lockscreen-container {
+    position: relative;
+}
+.lockscreen-time-container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    background-image: url(../assests/windows-11-lock-screen.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 100px;
+    color: var(--clr-white);
+    transition: var(--transition);
+}
+.lockscreen-time-container .time {
+    font-size: 72px;
+}
+.lockscreen-time-container .full-date {  
+    font-size: 20px;
+    font-weight: 600;
+}
+.unlockscreen {
+    transform: translateY(-100%);
+}
+/* lockscreen styling end */
+/* lockscreen password stylintg start */
+.lockscreen-password-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 20px;
+    position: relative;
+    padding-top: 100px;
+}
+.lockscreen-password-container::before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../assests/windows-11-lock-screen.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);    
+}
+.lockscreen-password-container div {
+    z-index: 5;
+}
+.lockscreen-password-container .user-profile-logo {
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: 20px;
+}
+.lockscreen-password-container .user-profile-logo img {
+    width: 100%;
+    height: 100%;
+}
+.lockscreen-password-container .user-password-section {
+    color: var(--clr-white);
+    text-align: center;
+
+}
+.lockscreen-password-container .user-password-section h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.lockscreen-password-container .user-password-section form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lockscreen-password-container .user-password-section form input {
+    border: none;
+    width: 200px;
+    height: 40px;
+    padding-inline: 10px;
+    font-size: 16px;
+    background-color: white;
+}
+input::placeholder {
+    color: var(--clr-gray);
+}
+.lockscreen-password-container .user-password-section form a {
+    background-color: none;
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.lockscreen-password-container .user-password-section form a img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    background-color: var(--clr-gray-40);
+}
+.lockscreen-password-container .user-password-section p {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+/* lockscreen password stylintg end */

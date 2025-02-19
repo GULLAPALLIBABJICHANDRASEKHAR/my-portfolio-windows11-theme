@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main-full-window-container {
+            background-image: url(./assests/windows-11-light-mode.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .taskbar-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+            padding: 5px 0px;
+            background-color: #FFFFFFA8;
+        }
+        .taskbar-container-center {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-items {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 20px;
+            border: 1px solid #000;
+        }
+        .nav-items .nav-item img {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <!-- main window container start -->
+    <div class="main-full-window-container container">
+        <nav class="taskbar-container">
+            <div class="taskbar-container-center">
+                <ul class="nav-items">
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/windows-11-logo.png" alt="Windows 11 Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/windows-11-search-logo.png" alt="Search logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/windows-11-taskbar-logo.png" alt="taskbar logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/edge-logo.png" alt="Edge Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/chrome-logo.png" alt="Chrome Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/file-explorer-logo.png" alt="File Explorer Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/github-logo.jpg" alt="Github Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/light-theme-logo.png" alt="Theme Logo">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav-items">
+                    <li>
+                        <div class="nav-item">
+
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- main window container end -->
+</body>
+</html>
