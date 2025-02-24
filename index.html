@@ -29,18 +29,208 @@
             <div class="user-password-section">
                 <h2>hello there!</h2>
                 <form>
-                    <input type="number" placeholder="Enter Pin" id="unlockPassword">
+                    <input type="number" placeholder="Enter Pin" id="passKey">
                     <a id="unlockBtn">
                         <img src="./assests/right-arrow.png" alt="right arrow">
                     </a>
                 </form>
-                <p>Hint: What is <span id="question">5 + 5</span> ?</p>
+                <p>Hint: What is <b id="question"> </b> ?</p>
+                <p id="tryAgainMsg"></p>
             </div>
         </div>
     </div>
     <!-- lockscreen container end -->
 
+    <!-- main window container start -->
+    <div class="main-full-window-container container">
+        <nav class="taskbar-container">
+            <div class="taskbar-container-center">
+                <ul class="nav-items">
+                    <li class="windowsLogoBtn">
+                        <a class="nav-item" onclick="windowsBtnAppear()">
+                            <img src="./assests/windows-11-logo.png" alt="Windows 11 Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/windows-11-search-logo.png" alt="Search logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/windows-11-taskbar-logo.png" alt="taskbar logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/edge-logo.png" alt="Edge Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/chrome-logo.png" alt="Chrome Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/file-explorer-logo.png" alt="File Explorer Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/github-logo.png" alt="Github Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <img src="./assests/light-theme-logo.png" alt="Theme Logo">
+                        </a>
+                    </li>
+                </ul>
+                <!-- <ul class="nav-items">
+                    <li>
 
+                    </li>
+                </ul> -->
+            </div>
+        </nav>
+    </div>
+    <!-- main window container end -->
+
+    <!-- windows button container start -->
+    <div class="windows-container">
+        <div class="windows-container-center">
+            <div class="windows-container-main">
+                <div class="window-searchbar">
+                    <input type="text" placeholder="Type here to search">
+                </div>
+                <div class="window-all-apps">
+                    <p class="heading">pinned<span class="right">&nbsp;<a href="#">all apps ></a>&nbsp;</span></p>
+                    <div class="apps">
+                        <article class="app chrome">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">Chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/edge-logo.png" alt="" class="app-icon">
+                            <p class="app-name">Edge</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/file-explorer-logo.png" alt="" class="app-icon">
+                            <p class="app-name">My File</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/settings-logo.png" alt="" class="app-icon">
+                            <p class="app-name">Settings</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/word-document-logo.png" alt="" class="app-icon">
+                            <p class="app-name">Word</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                        <article class="app">
+                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
+                            <p class="app-name">chrome</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="window-recommend-apps">
+                    <p class="heading">recommended</p>
+                    <div class="recommend-apps">
+                        <a href="https://www.linkedin.com/in/gbabjichandrasekhar" target="_blank" class="recommend-app">
+                            <img src="./assests/linkedIn-logo.png" alt="" class="app-icon">
+                            <p class="heading">Linkedin <br>
+                                <span class="sub-head">connect to linkedin</span>
+                            </p>
+                        </a>
+                        <article class="recommend-app">
+                            <img src="./assests/word-document-logo.png" alt="" class="app-icon">
+                            <p class="heading">resume <br>
+                                <span class="sub-head">check my resume</span>
+                            </p>
+                        </article>
+                        <article class="recommend-app">
+                            <img src="./assests/github-logo.png" alt="" class="app-icon">
+                            <p class="heading">github <br>
+                                <span class="sub-head">give a star</span>
+                            </p>
+                        </article>
+                        <article class="recommend-app">
+                            <img src="./assests/gmail-logo.png" alt="" class="app-icon" style="height: 30px; padding-left: 5px; padding-top: 5px;">
+                            <p class="heading">phone <br>
+                                <span class="sub-head">contact me</span>
+                            </p>
+                        </article>
+                        <article class="recommend-app">
+                            <img src="./assests/contact-logo.png" alt="" class="app-icon">
+                            <p class="heading">phone number <br>
+                                <span class="sub-head">contact me</span>
+                            </p>
+                        </article>
+                    </div>
+                </div>  
+            </div>
+            <div class="window-user">
+                <div class="user">
+                    <img src="./assests/babji-image.jpg" alt="Babji" class="user-img">
+                    <p class="user-name">Babji Chandra Sekhar</p>
+                </div>
+                <div class="power-off">
+                    <button class="power-off-btn">
+                        <img src="./assests/power-off-logo.png" alt="power-off-btn">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- windows button container end -->
 
     <script src="./js/app.js"></script>
 

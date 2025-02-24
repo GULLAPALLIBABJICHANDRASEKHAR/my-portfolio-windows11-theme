@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const randNum1 = Math.floor(Math.random() * 10);
+        const randNum2 = Math.floor(Math.random() * 10);
+        console.log(randNum1 + ", " + randNum2);
+        const result = randNum1 + randNum2;
+        const passKey = prompt("Result " + randNum1 + " + " + randNum2);
+        if (passKey == result) {
+            console.log("Yu passed");
+        }
+        else {
+            console.log("try again");
+        }
+        
+    </script>
+</body>
+</html>

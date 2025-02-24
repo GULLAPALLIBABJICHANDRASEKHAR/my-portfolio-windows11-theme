@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            overflow: hidden;
         }
         .main-full-window-container {
             background-image: url(./assests/windows-11-light-mode.jpeg);
@@ -76,9 +77,9 @@
             border-top-right-radius: 5px;
             background-color: #f2f2f2;
             position: absolute;
-            left: 35%;
+            left: 30%;
             top: 150%;
-            transition: 0.5s all linear;
+            /* transition: 0.1s all linear; */
         }
         .show-windows-container {
             width: 40%;
@@ -182,20 +183,23 @@
             justify-items: center;
             align-content: space-evenly;
             border-radius: 5px;
+            text-decoration: none;
         }
         .window-recommend-apps .recommend-app:hover {
             background-color: white;
         }
         .window-recommend-apps .recommend-app .app-icon {
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 30px;
         }
         .window-recommend-apps .recommend-app .heading {
             margin-left: 10px;
+            text-decoration: none;
         }
         .window-recommend-apps .recommend-app .sub-head {
             font-size: 12px;
             font-weight: 400;
+            text-decoration: none;
         }
         .window-user {
             border-bottom-right-radius: 5px;
@@ -241,8 +245,8 @@
         <nav class="taskbar-container">
             <div class="taskbar-container-center">
                 <ul class="nav-items">
-                    <li>
-                        <a href="#" class="nav-item">
+                    <li class="windowsLogoBtn">
+                        <a class="nav-item" onclick="windowsBtnAppear()">
                             <img src="./assests/windows-11-logo.png" alt="Windows 11 Logo">
                         </a>
                     </li>
@@ -304,23 +308,23 @@
                     <div class="apps">
                         <article class="app chrome">
                             <img src="./assests/chrome-logo.png" alt="" class="app-icon">
-                            <p class="app-name">chrome</p>
+                            <p class="app-name">Chrome</p>
                         </article>
                         <article class="app">
-                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
-                            <p class="app-name">chrome</p>
+                            <img src="./assests/edge-logo.png" alt="" class="app-icon">
+                            <p class="app-name">Edge</p>
                         </article>
                         <article class="app">
-                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
-                            <p class="app-name">chrome</p>
+                            <img src="./assests/file-explorer-logo.png" alt="" class="app-icon">
+                            <p class="app-name">My File</p>
                         </article>
                         <article class="app">
-                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
-                            <p class="app-name">chrome</p>
+                            <img src="./assests/settings-logo.png" alt="" class="app-icon">
+                            <p class="app-name">Settings</p>
                         </article>
                         <article class="app">
-                            <img src="./assests/chrome-logo.png" alt="" class="app-icon">
-                            <p class="app-name">chrome</p>
+                            <img src="./assests/word-document-logo.png" alt="" class="app-icon">
+                            <p class="app-name">Word</p>
                         </article>
                         <article class="app">
                             <img src="./assests/chrome-logo.png" alt="" class="app-icon">
@@ -379,12 +383,12 @@
                 <div class="window-recommend-apps">
                     <p class="heading">recommended</p>
                     <div class="recommend-apps">
-                        <article class="recommend-app">
+                        <a href="https://www.linkedin.com/in/gbabjichandrasekhar" target="_blank" class="recommend-app">
                             <img src="./assests/linkedIn-logo.png" alt="" class="app-icon">
                             <p class="heading">Linkedin <br>
                                 <span class="sub-head">connect to linkedin</span>
                             </p>
-                        </article>
+                        </a>
                         <article class="recommend-app">
                             <img src="./assests/word-document-logo.png" alt="" class="app-icon">
                             <p class="heading">resume <br>
@@ -426,5 +430,7 @@
         </div>
     </div>
     <!-- windows button container end -->
+
+    <script src="./js/app.js"></script>
 </body>
 </html>
