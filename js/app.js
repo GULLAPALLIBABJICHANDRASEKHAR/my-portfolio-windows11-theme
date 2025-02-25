@@ -33,18 +33,13 @@ function unlockScreen() {
 }
 unlockScreen();
 
-// Windows Container Appear/Disappear
 function windowsBtnAppear() {
     const windowsContainer = document.querySelector(".windows-container");
     const windowsBtn = document.querySelector(".windowsLogoBtn");
     // Event listener to toggle the visibility of the windows container on single click
-    windowsBtn.addEventListener("click", () => {
-        // Toggle visibility of windows container
-        if (windowsContainer.classList.contains("show-windows-container")) {
-            windowsContainer.classList.remove("show-windows-container");
-        } else {
-            windowsContainer.classList.add("show-windows-container");
-        }
+    windowsBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent the document click listener from firing immediately
+        windowsContainer.classList.toggle("show-windows-container");
     });
     // Event listener to close the container if clicked outside of it
     document.addEventListener("click", (e) => {
@@ -53,22 +48,24 @@ function windowsBtnAppear() {
         }
     });
 }
-windowsBtnAppear();
-// Call the function to enable the functionality
+windowsBtnAppear();  // Automatically invoke the function once the script is loaded
 
 // theme change from dark to light & light to dark
 function changeTheme() {
     const themeBtn = document.querySelector(".themeBtn");
-    const lightImg = document.querySelector(".light img");
-    const darkImg = document.querySelector(".dark img");
-    themeBtn.addEventListener("click", ()=> {
-        if(lightImg.style.display !== "none") {
-            lightImg.style.display = "none";
-            darkImg.style.display = "block";
-        }
-        else {
-            lightImg.style.display = "block";
-            darkImg.style.display = "none";
+    const themeContainer = document.querySelector(".main-full-window-container");
+    const themeIcon = document.querySelector(".themeIcon");
+    const taskbarContainer = document.querySelector(".taskbar-container");
+    themeBtn.addEventListener("click", () => {
+        const currentBackgroundImage = getComputedStyle(themeContainer).backgroundImage;
+        if (currentBackgroundImage.includes("windows-11-dark-mode.jpeg")) {
+            themeContainer.style.backgroundImage = 'url("../assests/windows-11-light-mode.jpeg")';
+            taskbarContainer.style.backgroundColor = '#FFFFFFA8';
+            themeIcon.src = '../assests/dark-theme-logo.png';
+        } else {
+            themeContainer.style.backgroundImage = 'url("../assests/windows-11-dark-mode.jpeg")';
+            taskbarContainer.style.backgroundColor = '#0e1024ea';
+            themeIcon.src = '../assests/light-theme-logo.png';
         }
     });
 }

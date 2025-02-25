@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     position: absolute;
-    z-index: 10;
+    z-index: 20;
     background-image: url(../assests/windows-11-lock-screen.jpg);
     background-size: cover;
     background-position: center;
@@ -37,7 +37,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 9;
+    z-index: 19;
     top: 0;
     left: 0;
     display: flex;
@@ -125,7 +125,11 @@ input::placeholder {
 
 /* Full window styling start */
 .main-full-window-container {
-    background-image: url(./assests/windows-11-lock-screen.jpeg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-image: url(../assests/windows-11-light-mode.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -189,19 +193,15 @@ input::placeholder {
     border-top-right-radius: 5px;
     background-color: #f2f2f2;
     position: absolute;
-    left: 30%;
-    top: 150%;
-    /* transition: 0.1s all linear; */
-}
-.show-windows-container {
-    width: 40%;
-    height: auto;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    position: absolute;
     left: 50%;
     top: 50%;
+    z-index: 12;
     transform: translate(-50%, -54%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.show-windows-container {
+    opacity: 1;
 }
 .windows-container-center {
     width: 100%;
