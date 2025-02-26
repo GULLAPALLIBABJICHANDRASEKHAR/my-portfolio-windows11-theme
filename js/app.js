@@ -33,6 +33,7 @@ function unlockScreen() {
 }
 unlockScreen();
 
+// Windows Appear
 function windowsBtnAppear() {
     const windowsContainer = document.querySelector(".windows-container");
     const windowsBtn = document.querySelector(".windowsLogoBtn");
@@ -49,6 +50,26 @@ function windowsBtnAppear() {
     });
 }
 windowsBtnAppear();  // Automatically invoke the function once the script is loaded
+
+// power button click function
+function powerBtnClick() {
+    const powerOptions = document.querySelector(".power-off-options");
+    const powerBtn = document.querySelector(".power-off-btn");
+    powerBtn.addEventListener("click", () => {
+        if (powerOptions.style.display == 'none') {
+            powerOptions.style.display = 'block';
+        }
+        else {
+            powerOptions.style.display = 'none';
+        }
+    });
+    document.addEventListener("click", (e) => {
+        if (!powerOptions.contains(e.target) && !powerBtn.contains(e.target)) {
+            powerOptions.style.display = 'none';
+        }
+    });
+}
+powerBtnClick();
 
 // theme change from dark to light & light to dark
 function changeTheme() {

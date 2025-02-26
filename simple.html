@@ -4,8 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'DM Sans';
+        }
+        .full-window {
+            width: 100%;
+            height: 93vh;
+            border: 3px solid #adadad;
+        }
+        .my-file-container {
+            width: 80%;
+            height: 80vh;
+        }
+        .my-file-container-center {
+            width: 100%;
+            height: 100%;
+        }
+        .window-header {
+            width: 100%;
+            height: 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f2f2f2;
+        }
+        .window-header .title {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            column-gap: 10px;
+            align-items: center;
+            padding-left: 10px;
+        }
+        .window-header .title img {
+            width: 30px;
+            height: 30px;
+        }
+        .window-header .title p {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .window-header .close-btns {
+            width: 10%;
+            height: 100%;
+        }
+        .window-header .close-btns button {
+            border: none;
+            width: 48%;
+            height: 100%;
+            cursor: pointer;
+        }
+        .window-header .close-btns button:nth-child(1):hover{
+            background-color: white;
+        }
+        .window-header .close-btns button:nth-child(2):hover{
+            background-color: red;
+        }
+        .window-header .close-btns button img {
+            width: 15px;
+            height: 15px;
+        }
+        .window-body {
+            width: 100%;
+            height: 95%;
+        }
+        .window-navbar {
+            width: 15%;
+            height: 100%;
+        }
+        .window-navbar .side-items {
+            width: 100%;
+            height: 100%;
+            border-right: 5px solid #adadad;
+        }
+        .side-items .side-item {
+            padding: 10px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+        .side-items .side-item:hover {
+            background-color: black;
+            color: white;
+        }
+        .side-items .side-item.active {
+            background-color: black;
+            color: white;
+            border-left: 10px solid #00aeff;
+        }
+    </style>
 </head>
 <body>
     
+    <!-- user profile My file Container start -->
+    <div class="full-window">
+        <div class="my-file-container-center">
+            <div class="window-header">
+                <div class="title">
+                    <img src="./assests/file-explorer-logo.png" alt="My Files">
+                    <p>My Files</p>
+                </div>
+                <div class="close-btns">
+                    <button class="full-screen">
+                        <img src="./assests/minimize-logo.png" alt="Fullscreen">
+                    </button>
+                    <button class="close">
+                        <img src="./assests/close-logo.png" alt="Close">
+                    </button>
+                </div>
+            </div>
+            <div class="window-body">
+                <aside class="window-navbar">
+                    <ul class="side-items">
+                        <li class="side-item active">about me</li>
+                        <li class="side-item">education</li>
+                        <li class="side-item">projects</li>
+                        <li class="side-item">skills</li>
+                        <li class="side-item">contact me</li>
+                    </ul>
+                </aside>
+                <main class="window-main"></main>
+            </div>
+        </div>
+    </div>
+    <!-- user profile My file Container end -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const sideItems = document.querySelectorAll('.side-item');
+        sideItems.forEach(item => {
+            item.addEventListener('click', function() {
+                sideItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    });
+    </script>
 </body>
 </html>
