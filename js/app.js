@@ -91,3 +91,28 @@ function changeTheme() {
     });
 }
 changeTheme();
+
+// my file container script
+document.addEventListener("DOMContentLoaded", function() {
+    const sideItems = document.querySelectorAll('.side-item');
+    const sections = document.querySelectorAll('.section');
+    // Hide all sections by default
+    sections.forEach(section => section.style.display = 'none');
+    // Display the default section (about-me) when the page loads
+    document.getElementById('about-me-section').style.display = 'block';
+    // Event listener for side items
+    sideItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Remove active class from all side items
+            sideItems.forEach(i => i.classList.remove('active'));
+            // Add active class to the clicked item
+            item.classList.add('active');
+            // Hide all sections
+            sections.forEach(section => section.style.display = 'none');
+            // Show the clicked section
+            const sectionId = item.id; // Get the clicked item's id
+            const targetSection = document.getElementById(sectionId + '-section'); // Match the section id
+            targetSection.style.display = 'block'; // Display the corresponding section
+        });
+    });
+});

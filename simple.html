@@ -33,6 +33,7 @@
             justify-content: space-between;
             align-items: center;
             background-color: #f2f2f2;
+            border-bottom: 5px solid #adadad;
         }
         .window-header .title {
             width: 20%;
@@ -74,6 +75,7 @@
         .window-body {
             width: 100%;
             height: 95%;
+            display: flex;
         }
         .window-navbar {
             width: 15%;
@@ -99,6 +101,222 @@
             color: white;
             border-left: 10px solid #00aeff;
         }
+        .window-main {
+            width: 85%;
+            height: 100%;
+            overflow-y: scroll;
+        }
+        .window-main::-webkit-scrollbar {
+            width: 20px;
+            background-color: #adadad;
+            color: white;
+        }
+        .window-main::-webkit-scrollbar-thumb {
+            background-color: white;
+            border-radius: 20px;
+        }
+        .window-main::-webkit-scrollbar-thumb:hover {
+            background-color: #f2f2f2;
+        }
+        .section {
+            width: 100%;
+            height: 100%;
+        }
+        .education-card {
+            width: 100%;
+            height: auto;
+            padding: 45px;
+        }
+        .education-card-main {
+            width: 100%;
+        }
+        .education-card-main .header {
+            color: #00aeff;
+        }
+        .education-card-main .school {
+            display: flex;
+            column-gap: 20px;
+            /* justify-content: center; */
+            align-items: center;
+        }
+        .education-card-main .school img {
+            width: 50px;
+            height: 60px;
+        }
+        .education-card-main .school .sch-name {
+            font-weight: 500;
+        }
+        .education-card-main .year {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .education-card-main span {
+            margin-left: 55%;
+        }
+        .section .underline {
+            width: 70%;
+            border: 2px solid #adadad;
+            margin-left: 15%;
+        }
+        .section .heading{
+            font-size: 40px;
+            text-align: center;
+            margin-block: 20px;
+        }
+        .section .sub-heading {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .project-cards {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            padding: 40px;
+        }
+        .project-card {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 9px 4px #adadad;
+        }
+        .project-card .project-name {
+            font-size: 30px;
+        }
+        .project-card .project-tools {
+            display: flex;
+            gap: 20px;
+            margin-block: 10px;
+        }
+        .project-card .project-tools li{
+            list-style-type: none;
+            padding: 5px 10px;
+            background-color: #adadad;
+            border-radius: 20px;
+            color: white;
+        }
+        .project-card .buttons {
+            margin-block: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        .project-card a {
+            width: 150px;
+            height: 50px;
+            text-decoration: none;
+            border-radius: 20px;
+            border: none;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0px 2px 9px 4px black;
+            transition: 0.5s all ease-in-out;
+        }
+        .project-card a img {
+            width: 30px;
+            height: 30px;
+        }
+        .project-card .live-btn {
+            background-color: red;
+            box-shadow: 0px 2px 9px 4px red;
+        }
+        .project-card a:hover {
+            box-shadow: none;
+        }
+        .skill-cards {
+            width: 100%;
+            padding: 20px;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .skill-card {
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0px 2px 9px 4px #adadad;
+        }
+        .skill-card .header {
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .skill-card ul li {
+            list-style-type: none;
+            padding: 10px;
+            margin-top: 5px;
+            color: white;
+            cursor: pointer;
+            background-color: #00aeff;
+        }
+        .skill-card:nth-child(2) ul li {
+            background-color: tomato;
+        }
+        .skill-card:nth-child(3) ul li {
+            background-color: teal;
+        }
+        .skill-card:nth-child(4) ul li {
+            background-color: sandybrown;
+        }
+        .skill-details {
+            padding-left: 50px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+        .skill-details img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+        #contact-me-section .header {
+            width: 100%;
+            font-size: 50px;
+            text-align: center;
+            padding: 15px;
+        }
+        #contact-me-section .header:nth-child(2) {
+            font-size: 30px;
+        }
+        .contactme-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 20px;
+        }
+        .contactme-card {
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0px 2px 4px 4px #adadad;
+            transition: 0.3s all ease-in-out;
+        }
+        .contactme-card:hover {
+            transform: scale(0.9);
+        }
+        .contactme-card img {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: 0px 2px 4px 4px #adadad;
+        }
+        .contactme-card p {
+            margin: 20px;
+            font-weight: 600;
+        }
+        .contactme-card a {
+            display: block;
+            color: black;
+            margin: 20px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -123,29 +341,263 @@
             <div class="window-body">
                 <aside class="window-navbar">
                     <ul class="side-items">
-                        <li class="side-item active">about me</li>
-                        <li class="side-item">education</li>
-                        <li class="side-item">projects</li>
-                        <li class="side-item">skills</li>
-                        <li class="side-item">contact me</li>
+                        <li class="side-item active" id="about-me">about me</li>
+                        <li class="side-item" id="education">education</li>
+                        <li class="side-item" id="projects">projects</li>
+                        <li class="side-item" id="skills">skills</li>
+                        <li class="side-item" id="contact-me">contact me</li>
                     </ul>
                 </aside>
-                <main class="window-main"></main>
+                <main class="window-main">
+                    <div class="details-section">
+                        <div class="section" id="about-me-section">
+                            <center>
+                                <img src="./assests/profile-logo.png" alt="Babji Chandra Sekhar">
+                                <h1>Hey, I'm Babji Chandra Sekhar</h1><br>
+                                <h3>I'm a Web Developer & Technical Support Specialist</h3><br>
+                                <p>I enjoy taking up complex problems and converting to an usable format. I develop responsive design web pages just by using HTML, CSS & JS.</p><br>
+                                <p>I excel at managing and optimizing server environments, ensuring high performance, security, and reliability through proactive administration and troubleshooting.</p><br>
+                                <p>I specialize in troubleshooting, installing, and configuring Windows environments, resolving issues efficiently to ensure optimal system performance, security, and seamless functionality.</p>
+                            </center>
+                        </div>
+                        <div class="section" id="education-section">
+                            <article class="education-card">
+                                <div class="education-card-main">
+                                    <h1 class="header">Bacherlor's Degree - (B.Sc - [Computer Science with Cognitive Systems])</h1>
+                                    <div class="school">
+                                        <img src="./assests/pbsc-logo.png" alt="PBSC Image">
+                                        <h2 class="sch-name">P B Siddhartha College of Arts & Science</h2>
+                                    </div>
+                                    <p class="year">2021 - 2024 <span>87.4%</span></p>
+                                </div>
+                            </article>
+                            <div class="underline"></div>
+                            <article class="education-card">
+                                <div class="education-card-main">
+                                    <h1 class="header">Intermediate</h1>
+                                    <div class="school">
+                                        <img src="./assests/pbsc-logo.png" alt="PBSC Image">
+                                        <h2 class="sch-name">P B Siddhartha Junior College of Arts & Science</h2>
+                                    </div>
+                                    <p class="year">2019 - 2021 <span>91.9%</span></p>
+                                </div>
+                            </article>
+                            <div class="underline"></div>
+                            <article class="education-card">
+                                <div class="education-card-main">
+                                    <h1 class="header">Secondary School Certificate</h1>
+                                    <div class="school">
+                                        <img src="./assests/rose-bud-logo.png" alt="RBPS Image">
+                                        <h2 class="sch-name">Rose Bud [E.M] High School</h2>
+                                    </div>
+                                    <p class="year">2018 - 2019 <span>92%</span></p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="section" id="projects-section">
+                            <h1 class="heading">My Projects</h1>
+                            <h2 class="sub-heading">Technical Support Projects</h2>
+                            <div class="project-cards-one">
+                                <article class="project-card">
+                                    <h2 class="project-name">Windows Server R2 2012 & 2022 Home Lab Project</h2>
+                                    <p class="project-desc"><b>Objective:</b> Designed and implemented a Windows Server environment to practice Active Directory management, network configuration, and server administration.</p>
+                                    <ul class="project-tools">
+                                        <li>Oracle VirtualBox</li>
+                                        <li>Windows Server 2022</li>
+                                        <li>Windows 10 Pro</li>
+                                        <li>Active Directory Tools</li>
+                                        <li>DNS</li>
+                                        <li>DHCP</li>
+                                        <li>Remote Services</li>
+                                        <li>Backup & Recovery</li>
+                                    </ul>
+                                    <div class="buttons">
+                                        <a href="https://drive.google.com/file/d/1ShSrMlxvTVE4y7KaUw7IrNpmORQ0vl4D/view?usp=sharing" target="_blank">&nbsp;&nbsp;Documentation&nbsp;&nbsp;</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <h2 class="sub-heading">Web Development Projects</h2>
+                            <div class="project-cards">
+                                <article class="project-card">
+                                    <h2 class="project-name">BCS College Website</h2>
+                                    <p class="project-desc">An interactive and responsive college website built using HTML, CSS, and JavaScript to enhance user experience and provide seamless navigation.</p>
+                                    <ul class="project-tools">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>Github</li>
+                                        <li>Netlify</li>
+                                    </ul>
+                                    <div class="buttons">
+                                        <a href="https://www.github.com/" target="_blank" class="github-btn">
+                                            <img src="./assests/github-logo.png" alt="Github"> Github
+                                        </a>
+                                        <a href="https://bcs-institute-of-technology.netlify.app/" target="_blank" class="live-btn">
+                                            <img src="./assests/live-logo.png" alt="live-btn"> Live
+                                        </a>
+                                    </div>
+                                </article>
+                                <article class="project-card">
+                                    <h2 class="project-name">Skyland Airplane Website</h2>
+                                    <p class="project-desc">An interactive and responsive Airplane website built using HTML, CSS, and JavaScript to enhance user experience and provide seamless navigation.</p>
+                                    <ul class="project-tools">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>Github</li>
+                                        <li>Netlify</li>
+                                    </ul>
+                                    <div class="buttons">
+                                        <a href="https://www.github.com/" target="_blank" class="github-btn">
+                                            <img src="./assests/github-logo.png" alt="Github"> Github
+                                        </a>
+                                        <a href="https://skylands-company.netlify.app/" target="_blank" class="live-btn">
+                                            <img src="./assests/live-logo.png" alt="live-btn"> Live
+                                        </a>
+                                    </div>
+                                </article>
+                                <article class="project-card">
+                                    <h2 class="project-name">BCS College Website</h2>
+                                    <p class="project-desc">An interactive and responsive college website built using HTML, CSS, and JavaScript to enhance user experience and provide seamless navigation.</p>
+                                    <ul class="project-tools">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>Github</li>
+                                        <li>Netlify</li>
+                                    </ul>
+                                    <div class="buttons">
+                                        <a href="https://www.github.com/" target="_blank" class="github-btn">
+                                            <img src="./assests/github-logo.png" alt="Github"> Github
+                                        </a>
+                                        <a href="https://bcs-institute-of-technology.netlify.app/" target="_blank" class="live-btn">
+                                            <img src="./assests/live-logo.png" alt="live-btn"> Live
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="section" id="skills-section">
+                            <h1 class="heading">My Skills</h1>
+                            <div class="skill-cards">
+                                <article class="skill-card">
+                                    <p class="header">Language Proficiency</p>
+                                    <ul>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                        <li>BootStrap Framework</li>
+                                        <li>JavaScript</li>
+                                        <li>Core Java</li>
+                                    </ul>
+                                </article>
+                                <article class="skill-card">
+                                    <p class="header">Technical Support Skills</p>
+                                    <ul>
+                                        <li>Windows 7, 10, 11</li>
+                                        <li>Server 2012 R2, 2022</li>
+                                        <li>Server Administration</li>
+                                        <li>Microsoft Hyper-V</li>
+                                        <li>Oracle VirtualBox</li>
+                                        <li>VmWare Workstation</li>
+                                    </ul>
+                                </article>
+                                <article class="skill-card">
+                                    <p class="header">Tools/IDE Proficiency</p>
+                                    <ul>
+                                        <li>Notion-Documentation</li>
+                                        <li>Vs Code</li>
+                                        <li>Netbeans</li>
+                                        <li>Eclipse</li>
+                                        <li>Netlify</li>
+                                    </ul>
+                                </article>
+                                <article class="skill-card">
+                                    <p class="header">Other Tools/ Technologies</p>
+                                    <ul>
+                                        <li>Troubleshooting Windows</li>
+                                        <li>Issue Resolving H/W & S/W</li>
+                                        <li>Github</li>
+                                        <li>Office 365</li>
+                                    </ul>
+                                </article>
+                            </div>
+                            <br><br><br><br><br>
+                            <div class="skill-details">
+                                <img src="./assests/HTML-logo.png" alt="HTML5">
+                                <img src="./assests/CSS-logo.png" alt="CSS3">
+                                <img src="./assests/Bootstrap-logo.png" alt="">
+                                <img src="./assests/JavaScript-logo.png" alt="">
+                                <img src="./assests/Java-logo.png" alt="">
+                                <img src="./assests/windows7-logo.png" alt="">
+                                <img src="./assests/Windows10-Logo.png" alt="">
+                                <img src="./assests/Windows11-logo.png" alt="">
+                                <img src="./assests/server12-logo.png" alt="">
+                                <img src="./assests/server22-logo.png" alt="">
+                                <img src="./assests/office365-logo.png" alt="">
+                                <img src="./assests/HyperV-Logo.png" alt="">
+                                <img src="./assests/oracle-virtualbox-logo.png" alt="">
+                                <img src="./assests/vmware-logo.png" alt="">
+                                <img src="./assests/notion-logo.png" alt="">
+                                <img src="./assests/netbeans-logo.png" alt="">
+                                <img src="./assests/eclipse-logo.png" alt="">
+                                <img src="./assests/vscode-logo.png" alt="">
+                                <img src="./assests/netlify-logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="section" id="contact-me-section">
+                            <h1 class="header">Contact Me</h1>
+                            <h2 class="header">Wants to Hire Me?</h2>
+                            <div class="contactme-cards">
+                                <article class="contactme-card">
+                                    <img src="./assests/gmail-logo.png" alt="Gmail Logo">
+                                    <p>hemalathasamudrala20@gmail.com/</br>gullapallibabjichnadrasekhar.com</p>
+                                </article>
+                                <article class="contactme-card">
+                                    <img src="./assests/contact-logo.png" alt="Phone Logo">
+                                    <p>+91 93921 17211/<br> +91 98664 96996</p>
+                                </article>
+                                <article class="contactme-card">
+                                    <img src="./assests/github-logo.png" alt="Github Logo">
+                                    <a href="https://github.com/GULLAPALLIBABJICHANDRASEKHAR" target="_blank">https://github.com/GULLAPALLIBABJICHANDRASEKHAR</a>
+                                </article>
+                                <article class="contactme-card">
+                                    <img src="./assests/linkedIn-logo.png" alt="Linkedin Logo">
+                                    <a href="https://www.linkedin.com/in/gbabjichandrasekhar/" target="_blank">https://www.linkedin.com/in/gbabjichandrasekhar/</a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>                   
+                </main>
             </div>
         </div>
     </div>
     <!-- user profile My file Container end -->
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
         const sideItems = document.querySelectorAll('.side-item');
+        const sections = document.querySelectorAll('.section');
+        // Hide all sections by default
+        sections.forEach(section => section.style.display = 'none');
+        // Display the default section (about-me) when the page loads
+        document.getElementById('about-me-section').style.display = 'block';
+        // Event listener for side items
         sideItems.forEach(item => {
             item.addEventListener('click', function() {
+                // Remove active class from all side items
                 sideItems.forEach(i => i.classList.remove('active'));
+                // Add active class to the clicked item
                 item.classList.add('active');
+                // Hide all sections
+                sections.forEach(section => section.style.display = 'none');
+                // Show the clicked section
+                const sectionId = item.id; // Get the clicked item's id
+                const targetSection = document.getElementById(sectionId + '-section'); // Match the section id
+                targetSection.style.display = 'block'; // Display the corresponding section
             });
         });
     });
+
     </script>
 </body>
 </html>
