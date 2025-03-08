@@ -1,3 +1,14 @@
+// time, date on lock screen
+const time =document.querySelector(".time");
+const date =document.querySelector(".full-date");
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const currentDateTime = new Date();
+// Time
+time.innerHTML = ((currentDateTime.getHours()<10? "0": "") + currentDateTime.getHours()) + ":" + ((currentDateTime.getMinutes()<10? "0": "") + currentDateTime.getMinutes());
+// Date
+date.innerHTML = days[currentDateTime.getDay()] + ", " + months[currentDateTime.getMonth()] + " " + ((currentDateTime.getDate()<10? "0": "") + currentDateTime.getDate());
+
 // lockscreen unlock
 function unlock() {
     const lockscreenContainer = document.querySelector(".lockscreen-time-container");
@@ -116,3 +127,53 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// Open the applications
+function app() {
+    const appBtns1 = document.querySelectorAll(".nav-item");
+    const appBtns2 = document.querySelectorAll(".app");
+    const closeBtn = document.querySelector(".close");
+    const fullScreenBtn = document.querySelector(".full-screen");
+    const mainWindow = document.querySelector(".my-container");
+    // open the each application
+    appBtns1.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            const appName = event.target.classList[1]; 
+            mainWindow.classList.remove("close-window");
+            mainWindow.classList.add(`${appName}-window`);
+            // If you want the app to open full-screen, you can check for specific apps here
+            if (appName === 'file-explorer') {
+                // You can add additional logic for full-screen or specific app behavior
+                mainWindow.classList.add("full-window");
+                mainWindow.classList.remove("my-container");
+            }
+        });
+    });
+
+    appBtns2.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            const appName = event.target.classList[1]; 
+            mainWindow.classList.remove("close-window");
+            mainWindow.classList.add(`${appName}-window`);
+            // If you want the app to open full-screen, you can check for specific apps here
+            if (appName === 'file-explorer') {
+                // You can add additional logic for full-screen or specific app behavior
+                mainWindow.classList.add("full-window");
+                mainWindow.classList.remove("my-container");
+            }
+        });
+    });
+
+    // Close the opened application
+    closeBtn.addEventListener("click", () => {
+        mainWindow.classList.add("close-window");
+        mainWindow.classList.remove("full-window");
+        mainWindow.classList.add("my-container");
+    });
+    // fullscreen the application
+    fullScreenBtn.addEventListener("click", () => {
+        mainWindow.classList.add("full-window");
+        mainWindow.classList.remove("my-container");
+    });
+}
+app();
